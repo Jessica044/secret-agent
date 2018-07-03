@@ -1,61 +1,145 @@
-body{
-    font-size:18px;
+html {
+    font-size: 18px;
+}
+
+body {
     font-family: helvetica;
-    max-width:960px;
+    width: 90%;
+    margin: auto;
+
 }
-header{
+
+header {
+
     background-color: black;
-    display:inline-flex;
-    width:100%;
-    height:auto;
-    padding:0.66rem 0;
-    align-items: center;
+    color: white;
 }
-.logo img{
+header .container{
+    display: inline-flex;
+    align-items:center;
+    padding: 12px 0 12px 0;
+}
+header img {
     height: 1.5rem;
     width: auto;
     padding-left: 0.5rem;
     padding-right: 1rem;
+    margin-left: 5rem;
 }
-.container{
-    display:flex;
-    justify-content: center;
-    flex-wrap: wrap;
+
+.container {
+
+    max-width: 960px;
+    margin: 0 auto;
 }
-.container span{
-    font-size: 1rem;
-    color: white;
-}
-.main-banner{
+
+.main-banner {
     background: url("../moto.jpeg") center no-repeat;
     background-size: cover;
     height: 25rem;
-    width: 100%;
-        
 }
-.main-banner .container{
-    text-align: left;
-    width: 20rem;
-    height:auto;
+
+.banner-box {
+    width: 20em;
     background-color: black;
-    justify-content: flex-start;
-    
-}
-.main-banner .container h4{
     color: white;
-    padding-top: 2rem;
-    padding-bottom: 0.125rem;
-    padding-left: 3rem;
-    font-size: 1rem;
-    font-weight: bold;
-    
-   
+    padding: 2em 3em;
+    position: relative;
+    top: 9em;
 }
-.main-banner .container h1{
-    padding-top: 0.125rem;
-    padding-left: 3rem;
-    padding-bottom: 2rem;
+
+.banner-box h4 {
+    color: white;
+
+    font-weight: bold;
+
+}
+
+.banner-box h1 {
+    margin: 0.25em 0;
     color: white;
     font-size: 2rem;
-    font-weight:bold;
+    font-weight: bold;
+}
+
+nav {
+    background-color: firebrick;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75em 0;
+    margin: 0 auto;
+}
+
+nav span {
+    margin: 0.75rem 1rem;
+    color: white;
+}
+
+.products {
+    margin: 3em 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item {
+    width: 30%;
+}
+
+.item-image{
+    height: 9rem;
+    padding: 2rem;
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 13em;
+}
+.item-image img{
+    max-width:100%;
+}
+
+.item .item-name{
+    background-color: black;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
+
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0 0 0;
+    width:100%;
+
+}
+
+.location-hours {
+    width: 35%;
+}
+.title{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+}
+
+footer {
+    display: flex;
+    color: white;
+    height: 5rem;
+    width: 100%;
+    text-align: left;
+    align-items: center;
+    background-color: black;
+}
+
+footer p {
+    padding: 0.5rem;
+    margin-left: 3rem;
+
 }
