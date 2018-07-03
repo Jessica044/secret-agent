@@ -1,23 +1,21 @@
 html {
     font-size: 18px;
 }
-
 body {
     font-family: helvetica;
     width: 90%;
     margin: auto;
-
 }
-
 header {
-
+    display: inline-flex;
     background-color: black;
     color: white;
+    width: 100%;
+    align-items: center;
 }
-header .container{
-    display: inline-flex;
-    align-items:center;
-    padding: 12px 0 12px 0;
+header .name {
+    text-align: left;
+    padding: 0.66em 0;
 }
 header img {
     height: 1.5rem;
@@ -26,19 +24,15 @@ header img {
     padding-right: 1rem;
     margin-left: 5rem;
 }
-
 .container {
-
     max-width: 960px;
     margin: 0 auto;
 }
-
 .main-banner {
     background: url("../moto.jpeg") center no-repeat;
     background-size: cover;
     height: 25rem;
 }
-
 .banner-box {
     width: 20em;
     background-color: black;
@@ -47,86 +41,83 @@ header img {
     position: relative;
     top: 9em;
 }
-
 .banner-box h4 {
     color: white;
-
     font-weight: bold;
-
 }
-
 .banner-box h1 {
     margin: 0.25em 0;
     color: white;
     font-size: 2rem;
     font-weight: bold;
 }
-
 nav {
     background-color: firebrick;
-    display: inline-flex;
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75em 0;
-    margin: 0 auto;
 }
-
-nav span {
-    margin: 0.75rem 1rem;
+nav ul {
+    display:flex;
     color: white;
-}
+    justify-content: space-around;
+    align-content: center;
+    padding: 0.25em 0;
+    list-style: none;
 
+}
+ul li{
+    padding: 0.25em 0.75em ;
+}
+.mobile {
+    display: block;
+}
+.mobile li{
+    padding:0;
+}
 .products {
+    display:flex;
+    justify-content: space-around;
     margin: 3em 0 0 0;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
 }
-
 .item {
     width: 30%;
-}
 
-.item-image{
-    height: 9rem;
-    padding: 2rem;
+}
+.item-image {
     border: 4px solid black;
     display: flex;
+    padding: 2em 0;
+    height: 9rem;
     justify-content: center;
     align-items: center;
-    max-width: 13em;
 }
-.item-image img{
-    max-width:100%;
-}
-
-.item .item-name{
+.item-image img {
+    max-width: 8em;
+    }
+.item .item-name {
     background-color: black;
     color: white;
     display: block;
     text-align: center;
     padding: 0.5rem 0;
-
 }
-
 .contact {
     display: flex;
     justify-content: space-between;
     margin: 3em 0 0 0;
-    width:100%;
-
+    width: 100%;
 }
 .location-hours {
     width: 35%;
+
 }
-.title{
+.title {
     display: block;
     background-color: black;
     color: white;
     padding: 1em 2em;
-}
 
+
+}
 footer {
     color: white;
     padding: 5em 2em;
@@ -134,5 +125,58 @@ footer {
     background-color: black;
     margin-top: 4em;
 }
+@media only screen and (min-width: 1025px){
+    nav .mobile{ display:none;}
+}
 
-
+@media only screen and (max-width:1024px) {
+    body{ font-size: 16px;
+    }
+    nav .mobile li{ display:block;
+     font-size: 1.5em;
+     text-align: center;
+     height: 2rem;
+    }
+     .container li{ display:none;}
+     .item{ width: 47%;      }
+     .glasses{ display:none;}
+}
+@media only screen and (max-width:470px) {
+    html{ font-size: 12px}
+    .name{ font-size: 1rem;    }
+    header img{
+    margin: 0.5em 0;}
+    .main-banner{height: 15rem; }
+    .banner-box {
+        padding: 1rem 2rem;
+        top: 10rem;
+        width: auto}
+    .banner-box h4{
+        font-size: 0.77rem;
+    }
+    .banner-box h1{
+        font-size: 1rem;
+    }
+    .item{  width:90%;   }
+    .watch{ display:none;}
+    .glasses {display:none;}
+    .contact{ display:block;
+    font-size: 1rem;}
+    .location-hours{ width:90%;
+    margin-top: 0.5rem;}
+    .title{ display:flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+     margin: 0 0 0 2.5em;
+    justify-content: center}
+    .location-hours span{
+    display:flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+     margin: 0 0 0.2em 2.5em;
+    justify-content: center}
+    footer{ text-align: center;
+    width: auto;
+    padding: 5rem 1rem;
+    font-size: 1rem;}
+}
